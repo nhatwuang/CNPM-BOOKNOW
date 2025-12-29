@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookNow - Doanh nghiệp</title>
+    <link rel="stylesheet" href="css/dichvu.css" />
+  </head>
+  <body>
+
+    
+    <!-- ================= Header ================= -->
+    <header>
+      <a href="business.html" class="logo">BookNow</a>
+      <nav>
+        <ul>
+          <li><a href="#">Quản lý dịch vụ</a></li>    
+          <li><a href="doanhthu.html">Doanh thu</a></li>
+          <li><a href="danhgia.html">Đánh giá</a></li>
+        </ul>
+      </nav>
+      <div class="auth-btns">
+        <span class="welcome-text">xin chào .doanh nghiệp</span>
+        <a href="dangnhap.html" class="login-btn">Đăng xuất</a>
+      </div>
+    </header>
+
+    <!-- ================= Banner ================ -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Quản lý dịch vụ của bạn</h1>
+        <p>
+          Dễ dàng thêm, sửa và xóa các chuyến đi để phục vụ khách hàng tốt hơn
+        </p>
+      </div>
+    </section>
+
+    <!-- THêm chuyến đi-->
+    <section class="container" id="dichvu">
+      <div class="admin-card" id="services">
+        <div class="card-header">
+          <h2><i class="fas fa-bus"></i> Thêm Chuyến Xe Mới</h2>
+          <p>Nhập thông tin chi tiết để đăng chuyến đi</p>
+        </div>
+
+        <div class="card-body">
+          <form id="addPhuongTienForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Điểm đi</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input type="text" id="diemDon" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Điểm đến</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-location-arrow"></i>
+                  <input type="text" id="diemDen" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Số ghế trống</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-chair"></i>
+                  <input type="number" id="soGhe" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Giá vé (VNĐ)</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-tag"></i>
+                  <input type="number" id="giaVePhuongTien" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Ảnh xe (Tùy chọn)</label>
+              <div class="file-upload-wrapper">
+                <input type="file" id="anhPhuongTien" accept="image/*" />
+                <div class="upload-icon">
+                  <i class="fas fa-cloud-upload-alt"></i> Chọn ảnh
+                </div>
+              </div>
+              <div id="previewPhuongTien" class="preview"></div>
+            </div>
+
+            <button type="submit" class="add-btn">Đăng chuyến xe ngay</button>
+          </form>
+        </div>
+      </div>
+     <!-- ================= Danh sách chuyến đi================= -->
+      
+        <div class="trips-list" id="tripsList">
+            <h2>Danh sách chuyến đi</h2>
+        </div>
+      
+      </section>
+    </section>
+
+    <!-- ================= Danh sách chuyến đi ================= -->
+
+    <!-- ================= Footer ================= -->
+    <footer class="footer-business">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h2>BookNow Business</h2>
+          <p>
+            Nền tảng kết nối doanh nghiệp và khách hàng nhanh chóng, hỗ trợ đặt
+            vé, và quản lý dịch vụ dễ dàng trên cùng một hệ thống.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Liên hệ</h3>
+          <nav>
+            <ul>
+              <li><a href="https://www.facebook.com/BookNow">Facebook</a></li>
+              <li><a href="https://www.twitter.com/BookNow">Twitter</a></li>
+              <li><a href="https://www.instagram.com/BookNow">Instagram</a></li>
+              <li><a href="mailto:q2u6a0n1g@gmail.com">Gmail</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 BookNow Business. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="vehiclePopup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <img id="popupVehicleImage" src="" alt="Hình ảnh phương tiện" />
+        <h2 id="popupVehicleLoai"></h2>
+        <p id="popupVehicleRoute"></p>
+        <p id="popupVehicleSeats"></p>
+        <p id="popupVehicleGia"></p>
+        <div class="popup-actions">
+          <button id="popupDeleteBtn">🗑 Xóa</button>
+        </div>
+      </div>
+    </div>
+    <div id="notification"></div>
+
+    <script src="js/business.js"></script>
+  </body>
+</html>
