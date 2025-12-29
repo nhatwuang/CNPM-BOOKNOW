@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+/* HEADER */
 header {
   background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
   color: rgb(45, 45, 45);
